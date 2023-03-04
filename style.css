@@ -1,0 +1,291 @@
+header {
+    background: linear-gradient(to bottom, #ff0033, #ff99cc);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: orange;
+    text-shadow: 2px 2px 4px #000000;
+    animation: rainbow 2s linear infinite;
+}
+
+#createBtn {
+    margin-right: 50px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+#createBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+    background-color: #ff3366;
+    cursor: pointer;
+}
+
+#blog-list {
+    margin-top: 150px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.blog-post {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #FEE;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    color: currentcolor;
+    text-shadow: 2px 2px 4px hotpink;
+}
+
+.blog-post small {
+    display: block;
+    margin-top: 10px;
+    color: #A43;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fade-in 0.5s ease;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    position: relative;
+    animation: slide-down 0.5s ease;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    transition: all 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    color: green;
+}
+
+form input,
+form textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px;
+}
+
+.form-buttons button {
+    margin-right: 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 20px;
+        color: red;
+        text-shadow: 2px 2px 4px #000000;
+        font-size: 20px;
+    }
+
+    #createBtn {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        height: 100%;
+        position: relative;
+    }
+
+    @media screen and (max-width: 600px) {
+        .modal-content {
+            margin: 30% auto;
+            width: 90%;
+        }
+    }
+
+    form label:hover {
+        color: orange;
+        text-decoration: underline;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        outline: none;
+        border: 2px solid blue;
+    }
+
+    .form-buttons button:hover {
+        background-color: magenta;
+        transition: background-color 0.5s ease;
+    }
+
+    @media screen and (max-width: 800px) {
+        form label {
+            color: blue;
+            font-size: 16px;
+        }
+
+        form input,
+        form textarea {
+            padding: 5px;
+        }
+
+        .form-buttons button {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    }
+
+    body {
+        background-image: url("https://unsplash.com/photos/RnCPiXixooY");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        animation: changeBgColor 5s ease infinite;
+    }
+
+    @keyframes changeBgColor {
+        0% {
+            background-color: #f5f5f5;
+        }
+
+        css Copy code 25% {
+            background-color: #ffdab9;
+        }
+
+        50% {
+            background-color: #d3d3d3;
+        }
+
+        75% {
+            background-color: #fafad2;
+        }
+
+        100% {
+            background-color: #f5f5f5;
+        }
+    }
+}
+
+
+body {
+    background: hsl(220deg, 10%, 97%);
+    margin: 0;
+    padding: 0;
+}
+
+.form-buttons {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background: white;
+    border: solid 2px black;
+    padding: .375em 1.125em;
+    font-size: 1rem;
+}
+
+.button-arounder {
+    font-size: 2rem;
+    background: hsl(190deg, 30%, 15%);
+    color: hsl(190deg, 10%, 95%);
+
+    box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, .2);
+    transfrom: translateY(0);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    --dur: .15s;
+    --delay: .15s;
+    --radius: 16px;
+
+    transition:{}
+        border-top-left-radius var(--dur) var(--delay) ease-out,
+        border-top-right-radius var(--dur) calc(var(--delay) * 2) ease-out,
+        border-bottom-right-radius var(--dur) calc(var(--delay) * 3) ease-out,
+        border-bottom-left-radius var(--dur) calc(var(--delay) * 4) ease-out,
+        box-shadow calc(var(--dur) * 4) ease-out,
+        transform calc(var(--dur) * 4) ease-out,
+        background calc(var(--dur) * 4) steps(4, jump-end);
+}
+
+.button-arounder:hover,
+.button-arounder:focus {
+    box-shadow: 0 4px 8px hsla(190deg, 15%, 5%, .2);
+    transform: translateY(-4px);
+    background: hsl(230deg, 50%, 45%);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}

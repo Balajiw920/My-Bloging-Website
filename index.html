@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-QC2z61t+hKn9tjqfBpUGbTi+DZGEBzHJjNsk+gRl7RVfN37mqOx9V2Kc0u+7aq3/" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-UWQ/QfA0Mm+GGdhjvS6NXkG8xAdxI9d+ypm4K4Wlv0mVT5dOzzN/kB0vyeLWwo3K"
+        crossorigin="anonymous"></script>
+
+    <title>My Blog Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Blogging Website</h1>
+        <button id="createBtn">Create a Blog</button>
+    </header>
+    <main>
+        <div id="blog-list"></div>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="blog-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <div class="form-buttons">
+                    <button type="submit" class="button-arounder" id="publishBtn">Publish</button>
+                    <button type="button" class="button-arounder" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
